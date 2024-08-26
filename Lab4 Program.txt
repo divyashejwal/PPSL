@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  string str="HELLO";
+  
+  //Concatanation
+  string greeting=str+",World!";
+  cout<<"concatenation:"<<greeting<<endl;
+  
+  //Substring
+  string part=greeting.substr(7,5);//Extracts"world"
+  cout<<"substring:"<<part<<endl;
+  
+  //find 
+  size_t pos=greeting.find("world");
+  cout<<"find:'World'found at position"<<pos<<endl;
+  
+  //Replace
+  string replace=greeting;
+  replace.replace(pos,5,"c++");
+  cout<<"Replace:"<<replace<<endl;
+  
+  //Insert
+  string inserted=greeting;
+  inserted.insert(5,"beutiful");
+  cout<<"Insert:"<<inserted<<endl;
+  
+  //Erase
+  string erased=greeting;
+  erased.erase(5,7);//Removes"world"
+  cout<<"Erase:"<<erased<<endl;
+  
+  //To uppercase
+  string uppercase=greeting;
+  for(char&c:uppercase) c=toupper(c);
+  cout<<"To uppercase:"<<uppercase<<endl;
+  
+  //To lowercase
+  string lowercase=greeting;
+  for(char&c:lowercase) c=tolower(c);
+  cout<<"To lowercase:"<<lowercase<<endl;
+  
+  return 0;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
